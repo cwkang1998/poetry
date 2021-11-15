@@ -1113,7 +1113,7 @@ def test_create_venv_accepts_fallback_version_w_nonzero_patchlevel(
 
     assert check_output.called
     m.assert_called_with(
-        config_virtualenvs_path / "{}-py3.5".format(venv_name),
+        config_virtualenvs_path / f"{venv_name}-py3.5",
         executable="python3.5",
         flags={"always-copy": False, "system-site-packages": False},
         with_pip=True,
